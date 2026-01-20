@@ -1,0 +1,108 @@
+<div class="container-fluid px-3 py-1">
+  <div class="row g-1 mb-1">
+    <div class="col-md-4">
+      <div class="pnl3-section mb-0 position-relative">
+        <canvas id="signalsEquityChart" style="width:100%; height:310px;"></canvas>
+          <div class="position-absolute t-sr p-2">
+            <div class="pnl3-chart-info">
+              <div>
+                <div class="pnl3-chart-name">Success Rate</div>
+                <div id="kpiSuccess">-</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="position-absolute t-sig p-2 text-end">
+            <div class="pnl3-chart-info">
+              <div>
+                <div class="pnl3-chart-name">Total Signals</div>
+                <div id="kpiTotalSignals">-</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="position-absolute t-pnl p-2">
+            <div class="pnl3-chart-info">
+              <div>
+                <div class="pnl3-chart-name">Realized PnL</div>
+                <div id="kpiNetPnl">-</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="position-absolute t-vol p-2 text-end">
+            <div class="pnl3-chart-info">
+              <div>
+                <div class="pnl3-chart-name">Total Volume</div>
+                <div id="kpiTotalVolume">-</div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    
+    <div class="col-md-5">
+      <div class="pnl3-section max-htabsig mb-0">
+        <table class="table-pnl3" id="signalsTableDashboard">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Token</th>
+              <th>Start MC</th>
+              <th>Current MC</th>
+              <th>PnL</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="pnl3-section position-relative mb-0 h-100 d-flex align-items-center justify-content-center">
+          <div class="position-absolute t-sr p-2 text-left">
+            <div class="pnl3-chart-info">
+              <div>
+                <div class="pnl3-chart-name d-flex align-items-center gap-1"><iconify-icon icon="svg-spinners:12-dots-scale-rotate" width="18" height="18"></iconify-icon> Active Signals PnL (Unrealized)</div>
+              </div>
+            </div>
+          </div>
+          <div class="position-absolute t-pnl p-2 text-left">
+            <div class="pnl3-chart-info">
+                <p class="small text-gray">Shows the PnL across all <br>historical and currently active signals.</p>
+            </div>
+          </div>
+          <div class="text-center">
+            <div id="kpiLivePnl" style="font-size:102px; font-weight:700; line-height: 94px;"></div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pnl3-top-tokens-wrapper mb-1">
+    <div class="pnl3-top-tokens" id="topTokensContainer"></div>
+  </div>
+
+  <div class="row g-1">
+    <div class="col-md-12">
+      <div class="pnl3-section mb-0">
+        <table class="table-pnl3" id="tokensTable">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Token</th>
+              <th>Token Address</th>
+              <th>Market Cap</th>
+              <th>Volume (24h)</th>
+              <th>Liquidity</th>
+              <th>Holders</th>
+              <th>OpenAI</th>
+              <th>Gemini</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

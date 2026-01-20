@@ -1,0 +1,24 @@
+# dependencies
+node_modules/
+
+# builds
+dist/
+build/
+out/
+
+# electron
+*.exe
+
+# database
+*.db
+
+# env
+.env
+.env.*
+
+# logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db

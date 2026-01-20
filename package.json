@@ -1,0 +1,22 @@
+{
+  "name": "oracle-pnl",
+  "version": "1.0.0",
+  "main": "main/main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^30.0.0",
+    "electron-rebuild": "^3.2.9",
+    "electron-reload": "^2.0.0-alpha.1"
+  },
+  "dependencies": {
+    "@google/genai": "^1.35.0",
+    "@solana/spl-token": "^0.4.14",
+    "@solana/web3.js": "^1.98.4",
+    "axios": "^1.13.2",
+    "better-sqlite3": "^12.5.0",
+    "openai": "^6.16.0",
+    "pg": "^8.17.1"
+  }
+}
