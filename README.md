@@ -1,39 +1,37 @@
 # OraclePnL
 
-<div align="center">
-  <h3>💰 AI-Powered Cryptocurrency Trading Signal Analysis Platform</h3>
-  <p>Advanced Solana token analysis with dual AI decision-making and real-time PnL tracking</p>
-</div>
+**Just a little test in AI sentiment analysis**
+
+A side project I've been working on - an Electron desktop app for analyzing Solana tokens using AI. It scans tokens, does some technical analysis, and uses OpenAI + Gemini to generate trading signals.
 
 ---
 
-## 🎯 Overview
+## What it does
 
-**OraclePnL** is an Electron-based desktop application that provides intelligent trading signal analysis for Solana tokens. It combines technical analysis, AI-powered decision-making (OpenAI + Gemini), and real-time profit/loss tracking to help traders make informed decisions.
+Basically, this app:
+- Scans pump.fun and DexScreener for new Solana tokens
+- Tracks price, volume, market cap in real-time
+- Does some technical analysis (support/resistance, trends, momentum)
+- Uses both OpenAI and Gemini AI to analyze tokens
+- Only creates a BUY signal when both AIs agree (consensus)
+- Tracks PnL with stop-loss and take-profit levels
 
-### Key Features
-
-- 🤖 **Dual AI Analysis** - Leverages both OpenAI and Gemini for consensus-based trading signals
-- 📊 **Real-Time Market Data** - Continuous monitoring of token prices, volume, and market cap
-- 🔍 **Token Discovery** - Automatically scans pump.fun and DexScreener for new opportunities
-- 📈 **Technical Analysis** - Built-in support/resistance detection, trend analysis, and momentum indicators
-- 💹 **PnL Tracking** - Real-time profit/loss monitoring with stop-loss and take-profit automation
-- 🎨 **Modern UI** - Clean, intuitive interface with purple theme
+It's pretty basic - not meant to be production-ready or anything. Just something I built to test out AI sentiment analysis on crypto tokens.
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
-### Prerequisites
+### Requirements
 
 - Node.js 18+ 
-- npm or yarn
+- npm
 
 ### Installation
 
 ```bash
-# Clone the repository
-git clone https://github.com/YOUR_USERNAME/oracle-pnl.git
+# Clone the repo
+git clone https://github.com/dogtoshi-sz/oracle-pnl.git
 cd oracle-pnl
 
 # Install dependencies
@@ -42,109 +40,109 @@ npm install
 # Rebuild native modules for Electron
 npx electron-rebuild
 
-# Start the application
+# Start the app
 npm start
 ```
 
-### Configuration
+### Setup
 
-1. **Set up API Keys** - Configure your OpenAI and Gemini API keys in the application settings
-2. **Configure AI Prompts** - Customize the prompts used for token analysis
-3. **Set Risk Parameters** - Adjust stop-loss, take-profit levels, and holding times
+You'll need to configure:
+1. OpenAI API key (in database settings)
+2. Gemini API key (in database settings)
+3. AI prompts for analysis
+4. Risk parameters (stop-loss, take-profit, etc.)
 
 ---
 
-## 📋 Features in Detail
+## Features
 
 ### Token Discovery
 - Scans pump.fun for trending tokens
 - Monitors DexScreener boosted listings
-- Filters by volume and market cap thresholds
+- Filters out low volume/market cap tokens
 
 ### Technical Analysis
-- 15m, 1h, and 4h candlestick charts
-- Support and resistance level detection
-- Trend bias and momentum analysis
-- Volume anomaly detection
-- Pump score calculation
+- Builds 15m, 1h, and 4h candlestick charts
+- Finds support and resistance levels
+- Calculates trends and momentum
+- Detects volume anomalies
+- Calculates pump scores
 
 ### AI Decision Making
-- Dual AI provider system (OpenAI GPT-4o-mini + Gemini 2.0 Flash)
-- Consensus-based BUY signals (both AIs must agree)
-- Configurable analysis prompts
-- Historical decision tracking
+- Uses OpenAI GPT-4o-mini for analysis
+- Uses Gemini 2.0 Flash as backup/second opinion
+- Only generates BUY signals when both agree
+- Stores decision history
 
 ### Signal Management
-- Automatic signal creation on AI consensus
-- Real-time PnL calculation
-- Stop-loss triggers
-- Multiple take-profit levels (TP1, TP2, TP3)
-- Time-based exit rules
+- Auto-creates signals when both AIs say BUY
+- Tracks PnL in real-time
+- Triggers stop-loss automatically
+- Multiple take-profit levels
+- Time-based exits
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
-- **Frontend**: HTML5, CSS3, JavaScript (ES6+)
-- **Backend**: Node.js, Electron
-- **Database**: SQLite (better-sqlite3)
-- **AI**: OpenAI API, Google Gemini API
-- **Blockchain**: Solana Web3.js
-- **APIs**: DexScreener, pump.fun
+- Frontend: HTML5, CSS3, JavaScript
+- Backend: Node.js, Electron
+- Database: SQLite
+- AI: OpenAI API, Google Gemini API
+- Blockchain: Solana Web3.js
+- Data Sources: DexScreener, pump.fun
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 oracle-pnl/
-├── assets/          # Static assets (CSS, JS, images)
+├── assets/          # CSS, JS, images
 ├── main/            # Electron main process
-│   ├── analysis/    # Technical analysis modules
-│   ├── scanners/    # Token discovery services
+│   ├── analysis/    # Technical analysis stuff
+│   ├── scanners/    # Token discovery
 │   ├── tokens/      # Token data management
-│   └── updaters/    # Market data updaters
-├── pages/           # Application pages
+│   └── updaters/    # Market data updates
+├── pages/           # App pages
 ├── partials/        # Reusable components
 └── index.html       # Entry point
 ```
 
 ---
 
-## ⚙️ Configuration
+## Configuration
 
-Settings are stored in the SQLite database. Key configuration options:
-
-- **AI Settings**: API keys and analysis prompts
-- **Risk Management**: Stop-loss, take-profit percentages
-- **Trading Rules**: Max hold time, volume thresholds
-- **RPC Endpoints**: Solana blockchain connection
-
----
-
-## ⚠️ Disclaimer
-
-This software is provided for **educational and informational purposes only**. 
-
-**NOT FINANCIAL ADVICE** - This application does not provide financial, investment, or trading advice. All signals and analysis are for informational purposes only.
-
-Cryptocurrency trading involves substantial risk. You may lose all of your capital. Use at your own risk.
+All settings are in the SQLite database:
+- AI API keys and prompts
+- Risk management (stop-loss, take-profit)
+- Trading rules (max hold time, volume thresholds)
+- Solana RPC endpoint
 
 ---
 
-## 📝 License
+## Disclaimer
 
-This project is licensed under the MIT License.
+This is just a side project for educational purposes. Not financial advice, not production-ready, not anything official.
 
----
+**Seriously - this is NOT financial advice.** Crypto trading is risky, you can lose everything. Use at your own risk.
 
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome!
+I'm not a financial advisor. This software is provided "as is" without any warranties. Don't sue me if you lose money.
 
 ---
 
-<div align="center">
-  <p>Made with ❤️ for the crypto trading community</p>
-  <p><strong>⚠️ Trade responsibly. This is not financial advice.</strong></p>
-</div>
+## License
+
+MIT License - do whatever you want with it.
+
+---
+
+## Contributing
+
+If you want to contribute, go ahead. I'll probably merge it if it makes sense.
+
+---
+
+Made as a side project to test AI sentiment analysis on crypto tokens.
+
+Trade responsibly. This is not financial advice.
